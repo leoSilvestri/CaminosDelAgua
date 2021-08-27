@@ -7,11 +7,13 @@
      --------------------------------------------- */
     
     $(window).on("load", function(){
-        
+         
         // Page loader        
         $(".page-loader div").fadeOut();
         $(".page-loader").delay(200).fadeOut("slow");
         
+       
+       // init_render_from_json_files() 
         init_text_rotator();
         initWorkFilter();
         init_scroll_navigate();
@@ -55,6 +57,46 @@
     });
     
     
+    function init_render_from_json_files(){ 
+        fetch('data-slider.json') 
+        .then(response => response.json())
+        .then(items => { init_render_slider(items) })
+        .catch(error => { 
+           // var error = new Error(response.statusText);
+            //error.response = response;
+            throw error;
+        }) 
+    }
+
+    function init_render_slider(items){  
+        const data = items.map(item => `<section class="${item.container.class}" data-background="${item.container.background}">
+            <div class="container min-height-100vh d-flex align-items-center pt-100 pb-100">
+                
+                <div class="home-content">
+                    <h1 class="${item.content.title1_class}" data-wow-delay=".1s">${item.content.title1_text}</h1>
+                    <h2 class="${item.content.title2_class}" data-wow-delay=".2s">${item.content.title2_text}</h2>
+                    <div class="${item.content.buttons_class}" data-wow-delay=".3s">
+                        <a href="#contact" class="btn btn-mod btn-w btn-medium btn-round mx-md-1">Contacto</a>
+                        <a href="#services" class="btn btn-mod btn-w btn-medium btn-round mx-md-1">Actividades</a>
+                    </div>
+                </div> 
+                
+            </div>
+        </section>
+        `).join('');  
+        document.getElementById("home").innerHTML = data ; 
+        
+        var pageSection = $(".home-section, .page-section, .small-section, .split-section");
+        pageSection.each(function(indx){        
+            if ($(this).attr("data-background")){
+                $(this).css("background-image", "url(" + $(this).data("background") + ")");
+            }
+        });
+        
+        initPageSliders();
+    }
+    
+
     /* --------------------------------------------
      Platform detect
      --------------------------------------------- */

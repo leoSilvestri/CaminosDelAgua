@@ -1,0 +1,74 @@
+[
+    {
+        "container" :
+        {
+            "class":"home-section bg-scroll bg-dark-alfa-50 light-content",
+            "background":"images/aventure/caminos-del-agua-kayak-canoe-aventure-1.jpg"
+        },
+        "content": {
+            "title1_class":"hs-line-4 mb-30 mb-xs-20 wow fadeInUpShort",
+            "title1_text":"Canotaje Santiago Vázquez",
+            "title2_class":"hs-line-7 mb-60 mb-xs-40 wow fadeInUpShort",
+            "title2_text":"Caminos del Agua",
+            "buttons_class":"local-scroll mb-20 wow fadeInUpShort",
+            "buttons": [
+                { 
+                    "link":"#contact",
+                    "desc":"Contacto"
+                },
+                { 
+                    "link":"#services",
+                    "desc":"Actividades"
+                }
+            ]
+        }
+    },
+    {
+        "container" :
+        {
+            "class":"home-section bg-scroll bg-dark-alfa-50 light-content",
+            "background":"images/aventure/caminos-del-agua-kayak-canoe-aventure-2.jpg"
+        },
+        "content": {
+            "title1_class":"hs-line-4 mb-30 mb-xs-20 owl-animate-1",
+            "title1_text":"¿Te imaginás paseando por el Río Santa Lucía, en uno de los lugares más lindos del Oeste de Montevideo?",
+            "title2_class":"hs-line-14 mb-60 mb-xs-40 owl-animate-2 owl-delay-450",
+            "title2_text":"Travesías en Canoa <br>Vive una experiencia inolvidable",
+            "buttons_class":"local-scroll mb-20 owl-animate-3 owl-delay-700",
+            "buttons": [
+                { 
+                    "link":"#contact",
+                    "desc":"Contacto"
+                },
+                { 
+                    "link":"#services",
+                    "desc":"Actividades"
+                }
+            ]
+        }
+    }  ,
+    {
+        "container" :
+        {
+            "class":"home-section bg-scroll bg-dark-alfa-50 light-content",
+            "background":"images/aventure/caminos-del-agua-kayak-canoe-aventure-3.jpg"
+        },
+        "content": {
+            "title1_class":"hs-line-4 mb-30 mb-xs-20 owl-animate-3",
+            "title1_text":"Actividad EcoTurística en Montevideo Oeste",
+            "title2_class":"hs-line-14 mb-60 mb-xs-40 owl-animate-3 owl-delay-450",
+            "title2_text":"Conoces, disfrutas y aprendes sobre el área Protegida 'Humedales del Santa Lucía'",
+            "buttons_class":"local-scroll mb-20 owl-animate-3 owl-delay-700",
+            "buttons": [
+                { 
+                    "link":"#contact",
+                    "desc":"Contacto"
+                },
+                { 
+                    "link":"#services",
+                    "desc":"Actividades"
+                }
+            ]
+        }
+    }  
+]
